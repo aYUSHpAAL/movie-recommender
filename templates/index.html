@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CineMatch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <h1>🎬 CineMatch</h1>
+    <p>Find movies you'll love instantly</p>
+
+    <form action="/recommend" method="POST" class="search-form">
+        <input 
+            type="text" 
+            name="movie" 
+            list="movie-list" 
+            placeholder="Search for a movie..." 
+            required
+        >
+
+        <datalist id="movie-list">
+            {% for movie in movies %}
+            <option value="{{ movie }}">
+            {% endfor %}
+        </datalist>
+
+        <button type="submit">Recommend</button>
+    </form>
+</div>
+
+
+<!-- RECOMMENDATIONS SECTION -->
+{% if recommended_movies %}
+<div class="recommendations">
+    <h2>Recommended For You</h2>
+
+    <div class="movie-grid">
+
+        {% for i in range(recommended_movies|length) %}
+        <div class="movie-card">
+
+            <img src="{{ recommended_posters[i] }}" alt="Movie Poster">
+
+            <div class="movie-info">
+                <h3>{{ recommended_movies[i] }}</h3>
+
+                {% if recommended_ratings %}
+                <p class="rating">⭐ {{ recommended_ratings[i] }}/10</p>
+                {% endif %}
+            </div>
+
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endif %}
+
+</body>
+</html>

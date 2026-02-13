@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+    color: white;
+    text-align: center;
+}
+
+.hero {
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.search-form input {
+    width: 420px;
+    padding: 14px 20px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: 0.3s;
+}
+
+.search-form input:focus {
+    border: 1px solid #e50914;
+    box-shadow: 0 0 15px rgba(229,9,20,0.6);
+}
+
+.search-form button {
+    padding: 14px 28px;
+    border-radius: 40px;
+    border: none;
+    background: #e50914;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rating {
+    margin-top: 5px;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.search-form button:hover {
+    background: #ff1f2d;
+    transform: scale(1.05);
+}
+
+.recommendations {
+    margin-top: 60px;
+}
+
+.recommendations h2 {
+    margin-bottom: 30px;
+}
+
+.movie-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.movie-card {
+    width: 200px;
+    transition: 0.3s;
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.movie-card:hover {
+    transform: scale(1.08);
+}
+
+.movie-card p {
+    margin-top: 10px;
+    font-weight: 500;
+}
