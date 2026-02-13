@@ -51,7 +51,7 @@ movie-recommender/
 
 1. Clone the repository
 
-git clone https://github.com/YOUR_GITHUB_USERNAME/movie-recommender.git
+[git clone https://github.com/aYUSHpAAL/movie-recommender.git](https://github.com/aYUSHpAAL/movie-recommender.git)
 cd movie-recommender
 
 2. Install dependencies
